@@ -6,144 +6,44 @@
   <title>Geologiya va konchilik ishi kafedrasi — Ilmiy profillar (Google Scholar)</title>
   <style>
     :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --brand:#0f766e;
-      --brand2:#115e59;
+      --bg:#f6f7fb; --card:#fff; --text:#1f2937; --muted:#6b7280; --line:#e5e7eb;
+      --brand:#0f766e; --brand2:#115e59;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px; margin:0 auto; padding:24px}
-    header{
-      background:linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#fff;
-      border-radius:16px;
-      padding:22px 22px;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
-    }
-    header h1{margin:0 0 6px; font-size:22px}
-    header p{margin:0; opacity:.95}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap:16px;
-      margin-top:16px;
-    }
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr}
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 8px 16px rgba(0,0,0,.04);
-    }
-    .card h2{
-      margin:0 0 10px;
-      font-size:16px;
-    }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    header h1{margin:0 0 6px;font-size:22px}
+    header p{margin:0;opacity:.95}
+    .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;margin-top:16px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 16px rgba(0,0,0,.04)}
+    .card h2{margin:0 0 10px;font-size:16px}
     .muted{color:var(--muted)}
-    .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:10px;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#fafafa;
-      font-size:12px;
-      color:var(--text);
-    }
-    .pill b{font-weight:600}
-    table{
-      width:100%;
-      border-collapse:collapse;
-      overflow:hidden;
-      border-radius:12px;
-      border:1px solid var(--line);
-    }
-    th, td{
-      padding:12px 10px;
-      border-bottom:1px solid var(--line);
-      vertical-align:top;
-      font-size:14px;
-    }
-    th{
-      background:#f9fafb;
-      text-align:left;
-      font-weight:700;
-      color:#111827;
-    }
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fafafa;font-size:12px}
+    table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:12px;border:1px solid var(--line)}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+    th{background:#f9fafb;text-align:left;font-weight:700;color:#111827}
     tr:last-child td{border-bottom:none}
-    .num{width:46px; text-align:center}
+    .num{width:46px;text-align:center}
     .nowrap{white-space:nowrap}
-    .links a{
-      display:inline-block;
-      margin-right:10px;
-      font-size:13px;
-    }
     .small{font-size:12px}
-    .footer{
-      margin-top:14px;
-      font-size:12px;
-      color:var(--muted);
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:space-between;
-      align-items:center;
-    }
+    .footer{margin-top:14px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
     .btn{
-      display:inline-block;
-      background:var(--brand);
-      color:#fff;
-      padding:10px 12px;
-      border-radius:10px;
-      font-weight:600;
-      font-size:13px;
+      display:inline-block;background:var(--brand);color:#fff;padding:10px 12px;border-radius:10px;
+      font-weight:700;font-size:13px;border:none;cursor:pointer
     }
-    .btn:hover{background:var(--brand2); text-decoration:none}
-    .kpi{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:10px;
-      margin-top:10px;
-    }
-    .kpi .box{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      background:#fcfcfc;
-    }
-    .kpi .val{font-size:18px; font-weight:800}
-    .kpi .lab{font-size:12px; color:var(--muted)}
-    .note{
-      padding:12px;
-      border-radius:12px;
-      border:1px dashed var(--line);
-      background:#fafafa;
-      color:var(--muted);
-      font-size:13px;
-      margin-top:10px;
-    }
+    .btn:hover{background:var(--brand2);text-decoration:none}
+    .btn.secondary{background:#111827}
+    .btn.secondary:hover{background:#000}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+    .kpi .box{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fcfcfc}
+    .kpi .val{font-size:18px;font-weight:800}
+    .kpi .lab{font-size:12px;color:var(--muted)}
+    .note{padding:12px;border-radius:12px;border:1px dashed var(--line);background:#fafafa;color:var(--muted);font-size:13px;margin-top:10px}
   </style>
 </head>
 
@@ -170,34 +70,24 @@
         </div>
 
         <div class="note">
-          Eslatma: Ko‘rsatkichlar (h-index, iqtiboslar) va havolalar o‘qituvchilarning shaxsiy profillaridan olinadi.
+          Eslatma: iqtiboslar (citations) va h-index ko‘rsatkichlari Scholar profillaridan olinib, jadvalga kiritiladi.
+          Sahifadagi umumiy ko‘rsatkichlar jadvaldan avtomatik hisoblanadi.
+        </div>
+
+        <!-- ✅ Excel/CSV yuklab olish tugmalari -->
+        <div class="actions">
+          <button class="btn" id="btnXls">Excel (.xls) yuklab olish</button>
+          <button class="btn secondary" id="btnCsv">CSV (.csv) yuklab olish</button>
         </div>
       </section>
 
       <aside class="card">
         <h2>Umumiy ko‘rsatkichlar</h2>
-        <!-- Shu yerini o'zingiz yangilab turing -->
         <div class="kpi">
-          <div class="box">
-            <div class="val" id="kpiTeachers">—</div>
-            <div class="lab">O‘qituvchilar soni</div>
-          </div>
-          <div class="box">
-            <div class="val" id="kpiWithScholar">—</div>
-            <div class="lab">Scholar profilli</div>
-          </div>
-          <div class="box">
-            <div class="val" id="kpiCitations">—</div>
-            <div class="lab">Umumiy iqtiboslar</div>
-          </div>
-          <div class="box">
-            <div class="val" id="kpiAvgH">—</div>
-            <div class="lab">O‘rtacha h-index</div>
-          </div>
-        </div>
-
-        <div class="note small">
-          Agar sahifani universitet domenida joylashtirsangiz, qidiruv tizimlari tezroq indekslaydi.
+          <div class="box"><div class="val" id="kpiTeachers">—</div><div class="lab">O‘qituvchilar soni</div></div>
+          <div class="box"><div class="val" id="kpiWithScholar">—</div><div class="lab">Scholar profilli</div></div>
+          <div class="box"><div class="val" id="kpiCitations">—</div><div class="lab">Umumiy iqtiboslar</div></div>
+          <div class="box"><div class="val" id="kpiAvgH">—</div><div class="lab">O‘rtacha h-index</div></div>
         </div>
 
         <div style="margin-top:12px">
@@ -209,7 +99,7 @@
     <section class="card" style="margin-top:16px" id="jadval">
       <h2>Professor-o‘qituvchilar ro‘yxati</h2>
 
-      <table aria-label="Kafedra o‘qituvchilari ilmiy profillari">
+      <table id="teacherTable" aria-label="Kafedra o‘qituvchilari ilmiy profillari">
         <thead>
           <tr>
             <th class="num">№</th>
@@ -223,41 +113,34 @@
           </tr>
         </thead>
         <tbody>
-          <!-- ====== NAMUNA QATORLAR (o'zingiznikiga almashtiring) ====== -->
+          <!-- NAMUNA: shu qatorlarni o'zingiznikiga almashtiring -->
           <tr>
             <td class="num">1</td>
             <td><b>Familiya Ism Sharif</b><div class="muted small">Mutaxassislik: Geologiya</div></td>
             <td class="nowrap">Dotsent</td>
             <td class="nowrap">PhD</td>
-            <td class="nowrap">
-              <a href="https://scholar.google.com/" target="_blank" rel="noopener">Profil</a>
-            </td>
+            <td class="nowrap"><a href="https://scholar.google.com/" target="_blank" rel="noopener">Profil</a></td>
             <td class="nowrap" data-hindex="5">5</td>
             <td class="nowrap" data-cites="120">120</td>
-            <td class="links nowrap">
+            <td class="nowrap">
               <a href="#" target="_blank" rel="noopener">ORCID</a>
               <a href="#" target="_blank" rel="noopener">Scopus</a>
             </td>
           </tr>
-
           <tr>
             <td class="num">2</td>
             <td><b>Familiya2 Ism2 Sharif2</b><div class="muted small">Mutaxassislik: Konchilik ishi</div></td>
             <td class="nowrap">Professor</td>
             <td class="nowrap">DSc</td>
-            <td class="nowrap">
-              <a href="https://scholar.google.com/" target="_blank" rel="noopener">Profil</a>
-            </td>
+            <td class="nowrap"><a href="https://scholar.google.com/" target="_blank" rel="noopener">Profil</a></td>
             <td class="nowrap" data-hindex="9">9</td>
             <td class="nowrap" data-cites="340">340</td>
-            <td class="links nowrap">
+            <td class="nowrap">
               <a href="#" target="_blank" rel="noopener">ORCID</a>
               <a href="#" target="_blank" rel="noopener">Scopus</a>
             </td>
           </tr>
-          <!-- ====== /NAMUNA QATORLAR ====== -->
-
-          <!-- Yangi o'qituvchi qo'shish uchun yuqoridagi <tr> ... </tr> ni nusxa ko'chirib qo'ying -->
+          <!-- /NAMUNA -->
         </tbody>
       </table>
 
@@ -269,38 +152,104 @@
   </div>
 
   <script>
-    // Jadvaldagi h-index va iqtiboslarni avtomatik jamlab "Umumiy ko'rsatkichlar"ga chiqaradi.
-    (function(){
-      const rows = document.querySelectorAll("tbody tr");
-      let teachers = 0, withScholar = 0, cites = 0, hsum = 0, hcount = 0;
+    // 1) KPI hisoblash (jadvaldagi data-hindex va data-cites dan)
+    (function calcKPI(){
+      const rows = document.querySelectorAll("#teacherTable tbody tr");
+      let teachers=0, withScholar=0, cites=0, hsum=0, hcount=0;
 
-      rows.forEach(r => {
-        // bo'sh qator bo'lmasin
+      rows.forEach(r=>{
         const nameCell = r.querySelector("td:nth-child(2)");
         if(!nameCell) return;
-
         teachers++;
 
         const scholarLink = r.querySelector("td:nth-child(5) a");
-        if (scholarLink && scholarLink.getAttribute("href") && scholarLink.getAttribute("href").includes("scholar.google")) {
-          withScholar++;
-        }
+        if (scholarLink && (scholarLink.getAttribute("href")||"").includes("scholar.google")) withScholar++;
 
         const hCell = r.querySelector("[data-hindex]");
         const cCell = r.querySelector("[data-cites]");
+        const h = hCell ? parseFloat(hCell.dataset.hindex) : NaN;
+        const c = cCell ? parseFloat(cCell.dataset.cites) : NaN;
 
-        const h = hCell ? parseFloat(hCell.getAttribute("data-hindex")) : NaN;
-        const c = cCell ? parseFloat(cCell.getAttribute("data-cites")) : NaN;
-
-        if(!Number.isNaN(h)) { hsum += h; hcount++; }
-        if(!Number.isNaN(c)) { cites += c; }
+        if(!Number.isNaN(h)){ hsum += h; hcount++; }
+        if(!Number.isNaN(c)){ cites += c; }
       });
 
-      document.getElementById("kpiTeachers").textContent = teachers ? teachers : "—";
-      document.getElementById("kpiWithScholar").textContent = withScholar ? withScholar : "—";
-      document.getElementById("kpiCitations").textContent = cites ? cites.toLocaleString("uz-UZ") : "—";
-      document.getElementById("kpiAvgH").textContent = hcount ? (hsum / hcount).toFixed(1) : "—";
+      document.getElementById("kpiTeachers").textContent = teachers || "—";
+      document.getElementById("kpiWithScholar").textContent = withScholar || "—";
+      document.getElementById("kpiCitations").textContent = teachers ? cites.toLocaleString("uz-UZ") : "—";
+      document.getElementById("kpiAvgH").textContent = hcount ? (hsum/hcount).toFixed(1) : "—";
     })();
+
+    // 2) Excel (.xls) eksport — Excel ochadigan “HTML table as XLS”
+    function downloadXls(){
+      const table = document.getElementById("teacherTable").cloneNode(true);
+
+      // Linklarni matnga aylantirish (Excelda chiroyli chiqishi uchun)
+      table.querySelectorAll("a").forEach(a=>{
+        const href = a.getAttribute("href") || "";
+        const text = a.textContent.trim() || "Link";
+        a.replaceWith(`${text}: ${href}`);
+      });
+
+      const html = `
+        <html xmlns:o="urn:schemas-microsoft-com:office:office"
+              xmlns:x="urn:schemas-microsoft-com:office:excel"
+              xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta charset="utf-8"></head>
+        <body>
+          <h3>Geologiya va konchilik ishi kafedrasi — ilmiy profillar (Google Scholar)</h3>
+          <p>Oxirgi yangilanish: ${document.getElementById("lastUpdated").textContent}</p>
+          ${table.outerHTML}
+        </body></html>`;
+
+      const blob = new Blob([html], {type: "application/vnd.ms-excel;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "kafedra-ilmiy-profillar.xls";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    // 3) CSV eksport
+    function downloadCsv(){
+      const rows = Array.from(document.querySelectorAll("#teacherTable tr"));
+      const csv = rows.map(tr=>{
+        const cells = Array.from(tr.querySelectorAll("th,td")).map(td=>{
+          // Linklarni matn + URL ko‘rinishda chiqaramiz
+          const links = Array.from(td.querySelectorAll("a")).map(a=>{
+            const t = (a.textContent||"Link").trim();
+            const h = (a.getAttribute("href")||"").trim();
+            return h ? `${t} (${h})` : t;
+          });
+
+          let text = td.textContent.replace(/\s+/g," ").trim();
+          if (links.length) text = links.join(" | ");
+
+          // CSV escaping
+          text = text.replace(/"/g,'""');
+          return `"${text}"`;
+        });
+        return cells.join(",");
+      }).join("\n");
+
+      const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "kafedra-ilmiy-profillar.csv";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById("btnXls").addEventListener("click", downloadXls);
+    document.getElementById("btnCsv").addEventListener("click", downloadCsv);
   </script>
 </body>
 </html>
